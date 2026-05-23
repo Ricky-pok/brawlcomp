@@ -6,8 +6,8 @@ import "./globals.css";
 const geist = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Brawl Prodigy",
-  description: "Competitive Brawl Stars platform",
+  title: "BrawlComp by Ricky",
+  description: "Competitive Brawl Stars draft tool",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -24,7 +24,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               className="font-extrabold text-lg tracking-tight"
               style={{ color: "var(--bs-gold)" }}
             >
-              ★ Brawl Prodigy
+              ★ BrawlComp by Ricky
             </Link>
             <Link href="/" className="text-sm transition-colors hover:text-white" style={{ color: "var(--bs-muted)" }}>
               Leaderboard
