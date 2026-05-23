@@ -11,7 +11,12 @@ export async function GET(request: Request) {
 
   try {
     const data = await getPlayer(tag);
-    return NextResponse.json(data);
+    return NextResponse.json({
+      tag: data.tag,
+      name: data.name,
+      trophies: data.trophies,
+      brawlers: data.brawlers.map((b) => ({ id: b.id, power: b.power })),
+    });
   } catch (error) {
     return NextResponse.json({ error: String(error) }, { status: 500 });
   }

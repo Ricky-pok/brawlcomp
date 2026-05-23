@@ -1,8 +1,24 @@
 @import "tailwindcss";
 
+/* Brawl Stars color palette */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bs-bg:           #0C1422;
+  --bs-panel:        #111E32;
+  --bs-card:         #162840;
+  --bs-card-hover:   #1C3252;
+  --bs-input:        #0A1828;
+  --bs-border:       #1E3A60;
+  --bs-gold:         #FFD13A;
+  --bs-gold-dim:     #C48A00;
+  --bs-blue:         #2463EA;
+  --bs-blue-dark:    #071428;
+  --bs-red:          #E83A2D;
+  --bs-red-dark:     #280808;
+  --bs-text:         #E8F0FF;
+  --bs-muted:        #527090;
+  --bs-green:        #4CC44C;
+  --background: var(--bs-bg);
+  --foreground: var(--bs-text);
 }
 
 @theme inline {
@@ -12,15 +28,14 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+body {
+  background: var(--bs-bg);
+  color: var(--bs-text);
+  font-family: var(--font-geist-sans, Arial, sans-serif);
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: var(--bs-panel); }
+::-webkit-scrollbar-thumb { background: var(--bs-border); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--bs-gold-dim); }
